@@ -7,8 +7,10 @@
     <Version>1.0.0-beta.1</Version>
     <Authors>okumura.pico</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/okumura-pico/Xunit.Extensions</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/okumura-pico/Xunit.Extensions</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>xunit</PackageTags>
@@ -21,4 +23,8 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="images\icon.png" Pack="true" PackagePath="\"/>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 </Project>
