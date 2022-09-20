@@ -4,20 +4,21 @@ on:
   - workflow_dispatch
 
 jobs:
-  build:
+  build_and_publish:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
       - name: Setup .NET
         uses: actions/setup-dotnet@v2
         with:
-          dotnet-version: 6.0.x
+          global-json-file: global.json
       - name: Restore dependencies
         run: dotnet restore
       - name: Build
         run: dotnet build --no-restore -c Release
       - name: Test
         run: dotnet test --no-build --verbosity normal -c Release
-      - name: Push
-        run: dotnet nuget push --api-key ${{secrets.NUGETAPIKEY}} Xunit.Extensions.Configuration.Json
+      - name: Pack
+        run: dotnet pack --no-build -c Release -o .
+      - name: Publish
+        run: dotnet nuget push *.nupkg --api-key ${{secrets.NUGET_API_KEY}} --source nuget.org --skip-duplicate
