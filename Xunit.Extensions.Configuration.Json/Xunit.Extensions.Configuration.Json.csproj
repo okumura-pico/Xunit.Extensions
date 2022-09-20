@@ -1,11 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <Title>Xunit.Extensions.Configuration.Json</Title>
+    <Description>Xunit fixture for loading configuration from a json file.</Description>
     <PackageId>Xunit.Extensions.Configuration.Json</PackageId>
-    <Version>1.0.0</Version>
-    <Authors>yoku</Authors>
-    <Company>yoku</Company>
+    <Version>1.0.0-beta.1</Version>
+    <Authors>okumura.pico</Authors>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/okumura-pico/Xunit.Extensions</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/okumura-pico/Xunit.Extensions</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>xunit</PackageTags>
+    <Copyright>(C) okumura.pico</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
