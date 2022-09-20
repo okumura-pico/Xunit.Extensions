@@ -1,3 +1,5 @@
+using System;
+
 namespace Microsoft.Extensions.Logging;
 
 public class TestOutputHelperExtensionTest
@@ -44,5 +46,18 @@ public class TestOutputHelperExtensionTest
 
         // Then
         actual.Should().NotBeNull();
+    }
+
+    [Fact]
+    public void TestOutput()
+    {
+        // Given
+        var instance = _output.CreateLogger<TestOutputHelperExtensionTest>();
+
+        // When
+        instance.LogCritical("Log critical {param}", "param1");
+        instance.Log(LogLevel.Trace, new Exception(), "Log exception");
+
+        // Then
     }
 }

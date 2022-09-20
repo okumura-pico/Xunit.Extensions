@@ -16,6 +16,9 @@ public class AwesomeTest
     {
         // Create logger
         _logger = output.CreateLogger<TestTarget>();
+
+        // Or specify mimum log level
+        _logger = output.CreateLogger<TestTarget>(LogLevel.Debug);
     }
 }
 ```
