@@ -1,23 +1,23 @@
-name: .NET
+name: Publish to nuget.org
 
 on:
-  push:
-    branches: [ "main" ]
+  - workflow_dispatch
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: 6.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore -c Release
-    - name: Test
-      run: dotnet test --no-build --verbosity normal -c Release
+      - uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 6.0.x
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --no-restore -c Release
+      - name: Test
+        run: dotnet test --no-build --verbosity normal -c Release
+      - name: Push
+        run: dotnet nuget push --api-key ${{secrets.NUGETAPIKEY}} Xunit.Extensions.Configuration.Json
