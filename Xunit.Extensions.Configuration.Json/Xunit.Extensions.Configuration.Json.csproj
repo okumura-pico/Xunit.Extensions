@@ -4,7 +4,7 @@
     <Title>Xunit.Extensions.Configuration.Json</Title>
     <Description>Xunit fixture for loading configuration from a json file.</Description>
     <PackageId>Xunit.Extensions.Configuration.Json</PackageId>
-    <Version>1.0.0-beta.1</Version>
+    <Version>1.0.0-beta.2</Version>
     <Authors>okumura</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageIcon>icon.png</PackageIcon>
