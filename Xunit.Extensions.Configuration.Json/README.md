@@ -5,11 +5,19 @@ Load configuration from "testsettings.json" file.
 ## Usage
 
 1. Create "testsettiongs.json" file at the top directory of a test project.
+
+```json
+{
+  "this": "is just a sample",
+  "hello": "test"
+}
+```
+
 2. Add following section to the .csproj file of a test project.
 
 ```xml
   <ItemGroup>
-    <ProjectReference Include="..\Xunit.Extensions.Configuration.Json\Xunit.Extensions.Configuration.Json.csproj" />
+    <Content Include="testsettings.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 ```
 
