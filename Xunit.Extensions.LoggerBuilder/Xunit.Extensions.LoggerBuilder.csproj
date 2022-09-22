@@ -4,7 +4,7 @@
     <Title>Xunit.Extensions.LoggerBuilder</Title>
     <Description>Build logger with Xunit ITesOutputHelper.</Description>
     <PackageId>Xunit.Extensions.LoggerBuilder</PackageId>
-    <Version>0.2.0</Version>
+    <Version>0.3.0</Version>
     <Authors>okumura</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageIcon>icon.png</PackageIcon>

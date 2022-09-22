@@ -12,52 +12,28 @@ public class TestOutputHelperExtensionTest
     }
 
     [Fact]
-    public void TestCreateGenericLogger()
+    public void TestCreateLoggerFactory()
     {
         // Given
 
         // When
-        var actual = _output.CreateLogger<TestOutputHelperExtensionTest>();
-
-        // Then
-        actual.Should().BeOfType<Logger<TestOutputHelperExtensionTest>>();
-    }
-
-    [Fact]
-    public void TestCreateLoggerByType()
-    {
-        // Given
-
-        // When
-        var actual = _output.CreateLogger(typeof(TestOutputHelperExtensionTest));
+        var actual = _output.CreateLoggerFactory();
 
         // Then
         actual.Should().NotBeNull();
     }
 
     [Fact]
-    public void TestCreateLoggerByName()
+    public void TestCreateLoggerWithConfiguraion()
     {
         // Given
-        var categoryName = this.GetType().Name;
+        var mock = new Mock<Action<ILoggingBuilder>>();
 
         // When
-        var actual = _output.CreateLogger(categoryName);
+        var actual = _output.CreateLoggerFactory(mock.Object);
 
         // Then
+        mock.Verify(x => x.Invoke(It.IsAny<ILoggingBuilder>()));
         actual.Should().NotBeNull();
-    }
-
-    [Fact]
-    public void TestOutput()
-    {
-        // Given
-        var instance = _output.CreateLogger<TestOutputHelperExtensionTest>();
-
-        // When
-        instance.LogCritical("Log critical {param}", "param1");
-        instance.Log(LogLevel.Trace, new Exception(), "Log exception");
-
-        // Then
     }
 }

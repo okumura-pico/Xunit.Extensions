@@ -7,44 +7,25 @@ namespace Microsoft.Extensions.Logging
     public static class TestOutputHelperExtension
     {
         /// <summary>
-        /// Create Logger
+        /// Create LoggerFactory
         /// </summary>
         /// <param name="output"></param>
-        /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public static ILogger<T> CreateLogger<T>(this ITestOutputHelper output,
-                                                 LogLevel minimumLogLevel = LogLevel.Trace) =>
-            CreateLoggerFactory(output, minimumLogLevel).CreateLogger<T>();
+        public static ILoggerFactory CreateLoggerFactory(this ITestOutputHelper output) =>
+            CreateLoggerFactory(output, builder => { });
 
         /// <summary>
-        /// Create Logger
+        /// Create LoggerFactory
         /// </summary>
         /// <param name="output"></param>
-        /// <param name="type"></param>
+        /// <param name="configure"></param>
         /// <returns></returns>
-        public static ILogger CreateLogger(this ITestOutputHelper output,
-                                           Type type,
-                                           LogLevel minimumLogLevel = LogLevel.Trace) =>
-            CreateLogger(output, type.Name);
-
-        /// <summary>
-        /// Create Logger
-        /// </summary>
-        /// <param name="output"></param>
-        /// <param name="categoryName"></param>
-        /// <returns></returns>
-        public static ILogger CreateLogger(this ITestOutputHelper output,
-                                           string categoryName,
-                                           LogLevel minimumLogLevel = LogLevel.Trace) =>
-            CreateLoggerFactory(output, minimumLogLevel).CreateLogger(categoryName);
-
-        private static ILoggerFactory CreateLoggerFactory(ITestOutputHelper output,
-                                                          LogLevel minimumLogLevel) =>
+        public static ILoggerFactory CreateLoggerFactory(this ITestOutputHelper output,
+                                                         Action<ILoggingBuilder> configure) =>
             LoggerFactory.Create(builder =>
             {
-                builder
-                    .SetMinimumLevel(minimumLogLevel)
-                    .AddProvider(new XunitLoggerProvider(output));
+                configure.Invoke(builder);
+                builder.AddProvider(new XunitLoggerProvider(output));
             });
     }
 }

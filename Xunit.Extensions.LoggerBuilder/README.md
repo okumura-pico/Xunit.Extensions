@@ -15,10 +15,16 @@ public class AwesomeTest
     public AwesomeTest(ITestOutputHelper output)
     {
         // Create logger
-        _logger = output.CreateLogger<TestTarget>();
+        _logger = output
+            .CreateLoggerFactory()
+            .CreateLogger<TestTarget>();
 
-        // Or specify mimum log level
-        _logger = output.CreateLogger<TestTarget>(LogLevel.Debug);
+        // Create logger with configuration
+        _logger = output
+            .CrateLoggerFactory(builder => {
+                builder.SetMinimumLevel(LogLevel.Debug)
+            })
+            .CreateLogger<TestTarget>();
     }
 }
 ```
