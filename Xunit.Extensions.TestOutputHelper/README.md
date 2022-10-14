@@ -1,6 +1,6 @@
-# Xunit.Extensions.LoggerBuilder
+# Xunit.Extensions.TestOutputHelper
 
-Build logger with XUnit ITestOutputHelper.
+Building logger extension for Xunit ITesOutputHelper.
 
 ## Usage
 
@@ -14,12 +14,14 @@ public class AwesomeTest
     // Add ITestOutputHelper to constructor parameter
     public AwesomeTest(ITestOutputHelper output)
     {
-        // Create logger
+        // Create logger with default configuration
         _logger = output
             .CreateLoggerFactory()
             .CreateLogger<TestTarget>();
 
-        // Create logger with configuration
+        // or...
+
+        // Create logger with some configuration
         _logger = output
             .CrateLoggerFactory(builder => {
                 builder.SetMinimumLevel(LogLevel.Debug)

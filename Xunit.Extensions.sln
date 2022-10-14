@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xunit.Extensions.Configurat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xunit.Extensions.Configuration.Json.Tests", "Xunit.Extensions.Configuration.Json.Tests\Xunit.Extensions.Configuration.Json.Tests.csproj", "{15278E76-8E67-4EA3-9A81-A8A7C451C4F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xunit.Extensions.LoggerBuilder", "Xunit.Extensions.LoggerBuilder\Xunit.Extensions.LoggerBuilder.csproj", "{0AC27BF2-53EC-4F0F-90AE-B54BF5F3E1B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xunit.Extensions.TestOutputHelper", "Xunit.Extensions.TestOutputHelper\Xunit.Extensions.TestOutputHelper.csproj", "{02823492-CBBC-4F7B-AB48-509E3A6299EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xunit.Extensions.LoggerBuilder.Tests", "Xunit.Extensions.LoggerBuilder.Tests\Xunit.Extensions.LoggerBuilder.Tests.csproj", "{76DD0EF7-211E-4278-9AEF-3886D50F4755}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xunit.Extensions.TestOutputHelper.Tests", "Xunit.Extensions.TestOutputHelper.Tests\Xunit.Extensions.TestOutputHelper.Tests.csproj", "{C1D0F9FE-D4A2-481D-ADC4-18F505757A9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,13 +28,13 @@ Global
 		{15278E76-8E67-4EA3-9A81-A8A7C451C4F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15278E76-8E67-4EA3-9A81-A8A7C451C4F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15278E76-8E67-4EA3-9A81-A8A7C451C4F6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0AC27BF2-53EC-4F0F-90AE-B54BF5F3E1B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0AC27BF2-53EC-4F0F-90AE-B54BF5F3E1B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0AC27BF2-53EC-4F0F-90AE-B54BF5F3E1B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0AC27BF2-53EC-4F0F-90AE-B54BF5F3E1B5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{76DD0EF7-211E-4278-9AEF-3886D50F4755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76DD0EF7-211E-4278-9AEF-3886D50F4755}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{76DD0EF7-211E-4278-9AEF-3886D50F4755}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{76DD0EF7-211E-4278-9AEF-3886D50F4755}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02823492-CBBC-4F7B-AB48-509E3A6299EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02823492-CBBC-4F7B-AB48-509E3A6299EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02823492-CBBC-4F7B-AB48-509E3A6299EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02823492-CBBC-4F7B-AB48-509E3A6299EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1D0F9FE-D4A2-481D-ADC4-18F505757A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D0F9FE-D4A2-481D-ADC4-18F505757A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D0F9FE-D4A2-481D-ADC4-18F505757A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D0F9FE-D4A2-481D-ADC4-18F505757A9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

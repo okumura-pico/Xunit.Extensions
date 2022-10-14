@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Xunit.Extensions.LoggerBuilder\Xunit.Extensions.LoggerBuilder.csproj" />
+    <ProjectReference Include="..\Xunit.Extensions.TestOutputHelper\Xunit.Extensions.TestOutputHelper.csproj" />
   </ItemGroup>
 
 </Project>

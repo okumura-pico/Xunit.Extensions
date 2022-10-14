@@ -3,6 +3,6 @@
 Some usefull packages for Xunit testing.
 
 * [Xunit.Extensions.Configuration.Json](./Xunit.Extensions.Configuration.Json/)
-* [Xunit.Extensions.LoggerBuilder](./Xunit.Extensions.LoggerBuilder/)
+* [Xunit.Extensions.TestOutputHelper](./Xunit.Extensions.TestOutputHelper/)
 
 

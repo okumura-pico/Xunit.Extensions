@@ -1,12 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Title>Xunit.Extensions.LoggerBuilder</Title>
-    <Description>Build logger with Xunit ITesOutputHelper.</Description>
-    <PackageId>Xunit.Extensions.LoggerBuilder</PackageId>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Title>Xunit.Extensions.TestOutputHelper</Title>
+    <Description>Building logger extension for Xunit ITesOutputHelper.</Description>
     <Version>0.3.0</Version>
     <Authors>okumura</Authors>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Xunit.Extensions.TestOutputHelper</PackageId>
     <PackageIcon>icon.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/okumura-pico/Xunit.Extensions</PackageProjectUrl>
@@ -15,7 +19,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>xunit</PackageTags>
     <Copyright>(C) okumura.pico</Copyright>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+
   </PropertyGroup>
 
   <ItemGroup>
