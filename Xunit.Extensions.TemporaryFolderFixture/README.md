@@ -1,4 +1,6 @@
-# Xunit.Extensions.TemporaryFolderFixture;
+# Xunit.Extensions.TemporaryFolderFixture
+
+Create temporary folder and remove it at the end.
 
 ## Usage
 
